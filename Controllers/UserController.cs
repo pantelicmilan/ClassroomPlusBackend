@@ -73,7 +73,6 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Policy = "RequireId")]
     [Route("register")]
     public async Task<IActionResult> registerUser([FromForm] RegisterUserDTO userDTO)
     {
